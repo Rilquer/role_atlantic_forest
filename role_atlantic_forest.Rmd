@@ -1,0 +1,71 @@
+---
+title: "Using the RoLE model in the Atlantic Forest"
+author: "Rilquer Mascarenhas"
+date: "2022-10-19"
+output: html_document
+---
+
+# Setting up the analyses
+
+```{r Setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      tidy = TRUE, results = "hide")
+```
+
+Loading some packages:
+
+```{r Packages, warning=FALSE, message=FALSE, echo=FALSE}
+packages <- c('tidyverse','xlsx','ggmap','ggplot2','ggforce','sf','ggspatial',
+              'rnaturalearth','rgdal','raster','rgeos')
+
+for (name in packages) {
+  bool <- require(name, character.only = TRUE)
+  if (bool==FALSE) {
+    install.packages(name, dependencies = TRUE)
+  }
+  library(name, character.only = TRUE)
+}
+```
+
+Installing RoleR package:
+
+```{r}
+
+devtools::install_github('role-model/roleR')
+
+devtools::install_github('role-model/roleShiny')
+
+```
+
+Plotting relative abundance of orders and families for insects triaged so far (Oct 2022):
+
+```{r}
+
+insects <- read.csv('data/RoLE_Insects_Triage_oct2022.csv')
+
+ara.abundance <- insects %>% filter(Island == 'ARA') %>% group_by(Família) %>%
+  summarise(Order = unique(Ordem), N = sum(Nº.de.especimes)) %>% arrange(desc(N))
+
+uba.abundance <- insects %>% filter(Island == 'UBA') %>% group_by(Família) %>%
+  summarise(Order = unique(Ordem), N = sum(Nº.de.especimes)) %>% arrange(desc(N))
+
+data <- rbind(ara.abundance,uba.abundance)
+
+plotdata <- data.frame(data, island = c(rep('Araripe',nrow(ara.abundance)),
+                                        rep('Ubajara',nrow(uba.abundance))))
+
+colnames(plotdata) <- c('Family','Order','N','Island')
+
+plotdata$Family <- factor(plotdata$Family,
+                         levels = ara.abundance$Família)
+
+ggplot(data = plotdata, aes(x = Family, y = N, group = Island, fill = Island))+
+  geom_bar(stat = 'identity', position = position_dodge()) + 
+  theme(axis.text.x = element_text(angle = 50, vjust = 0.9, hjust=1))+
+  ggtitle("Abundance of orders")
+ggsave('output/insect_order_abundance_oct2022.png', width = 9, height = 7)
+
+save.image('role_af.RData')
+```
+
+
