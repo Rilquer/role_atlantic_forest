@@ -68,4 +68,33 @@ ggsave('output/insect_order_abundance_oct2022.png', width = 9, height = 7)
 save.image('role_af.RData')
 ```
 
+Thinking of elevation and island-like system in southern AF:
+
+```{r}
+library(sf)
+library(tidyverse)
+library(raster)
+study.area <- c(-60.94043,-33.21999,-33.98999,-1.12)
+study.crs <- "+proj=longlat +datum=WGS84 +no_defs"
+
+# Creating AF Shapefile
+af.shapefile <- st_read('data/spatial_layers/official_teow_samer/official_teow_samer.shp')
+st_crs(af.shapefile) <- study.crs
+eco.names <- c("Alto Paraná Atlantic Forests","Araucaria Moist Forests",
+               "Bahia Coastal Forests","Bahia Interior Forests","Caatinga Enclaves Moist Forests",
+               "Pernambuco Coastal Forests","Pernambuco Interior Forests","Serra Do Mar Coastal Forests",
+               "Atlantic Dry Forests")
+
+af.shapefile <- af.shapefile %>% filter(ECO_NAME %in% eco.names)
+
+write_sf(af.shapefile,'data/spatial_layers/af.shapefile.ecorr/af.shapefile.ecorr.shp')
+
+elevation <- raster('data/spatial_layers/wc2.1_30s_elev/wc2.1_30s_elev.tif')
+
+# EXTRACT ELEVATION PER ECORREGION (MEAN, SD, RANGE) to visualize possible community differences
+
+# LOOK FOR A VEGETATION
+
+```
+
 
