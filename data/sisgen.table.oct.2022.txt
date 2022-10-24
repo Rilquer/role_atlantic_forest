@@ -1,0 +1,25 @@
+Ordem	city	tombo
+Blattodea	Crato	Blatto.1, Blatto.4, Blatto.12, Blatto.13
+Blattodea	Barbalha	Blatto.3, Blatto.5, Blatto.6, Blatto.7, Blatto.9, Blatto.10, Blatto.11
+Blattodea	Ubajara	Blatto.16, Blatto.17, Blatto.18, Blatto.19, Blatto.20
+Coleoptera	Crato	Coleo.6001, Coleo.6002, Coleo.6003, Coleo.6004, Coleo.6010, Coleo.6041, Coleo.6043, Coleo.6044, Coleo.6045, Coleo.6046, Coleo.6047, Coleo.6048, Coleo.6050, Coleo.6052
+Coleoptera	Barbalha	Coleo.6006, Coleo.6007, Coleo.6008, Coleo.6009, Coleo.6015, Coleo.6016, Coleo.6017, Coleo.6018, Coleo.6020, Coleo.6021, Coleo.6022, Coleo.6023, Coleo.6024, Coleo.6025, Coleo.6027, Coleo.6029, Coleo.6031, Coleo.6034, Coleo.6035, Coleo.6036, Coleo.6039, Coleo.6040
+Coleoptera	Ubajara	Coleo.6053, Coleo.6054, Coleo.6055, Coleo.6059, Coleo.6060, Coleo.6062, Coleo.6063, Coleo.6064, Coleo.6065, Coleo.6068, Coleo.6071, Coleo.6072, Coleo.6073, Coleo.6074, Coleo.6077
+Dermaptera	Crato	Dermap.1
+Dermaptera	Ubajara	Dermap.3
+Diptera	Crato	Dipt.1934, Dipt.1937, Dipt.1938, Dipt.1939, Dipt.1940, Dipt.1942, Dipt.1943, Dipt.1944, Dipt.1946, Dipt.1947, Dipt.1992, Dipt.1993, Dipt.1996, Dipt.1997, Dipt.1998, Dipt.1999, Dipt.2000, Dipt.2001, Dipt.2002, Dipt.2003, Dipt.2004, Dipt.2005, Dipt.2006, Dipt.2007
+Diptera	Barbalha	Dipt.1935, Dipt.1936, Dipt.1949, Dipt.1950, Dipt.1951, Dipt.1953, Dipt.1954, Dipt.1955, Dipt.1956, Dipt.1957, Dipt.1958, Dipt.1959, Dipt.1962, Dipt.1963, Dipt.1964, Dipt.1965, Dipt.1966, Dipt.1967, Dipt.1971, Dipt.1973, Dipt.1975, Dipt.1977, Dipt.1978, Dipt.1979, Dipt.1980, Dipt.1981, Dipt.1982, Dipt.1983, Dipt.1987
+Diptera	Ubajara	Dipt.2008, Dipt.2009, Dipt.2010, Dipt.2011, Dipt.2012, Dipt.2013, Dipt.2014, Dipt.2015, Dipt.2018, Dipt.2020, Dipt.2021, Dipt.2023, Dipt.2024, Dipt.2025, Dipt.2026, Dipt.2027, Dipt.2031, Dipt.2032, Dipt.2033, Dipt.2035, Dipt.2037, Dipt.2040, Dipt.2041, Dipt.2043, Dipt.2045, Dipt.2046, Dipt.2047, Dipt.2048, Dipt.2049, Dipt.2050, Dipt.2052, Dipt.2053, Dipt.2055, Dipt.2059, Dipt.2060, Dipt.2061, Dipt.2062, Dipt.2063
+Embioptera	Barbalha	Embiop.1
+Hemiptera	Crato	Hemip.2, Hemip.15, Hemip.16, Hemip.17, Hemip.18
+Hemiptera	Barbalha	Hemip.3, Hemip.6, Hemip.8, Hemip.10, Hemip.11, Hemip.12
+Hemiptera	Ubajara	Hemip.22, Hemip.23, Hemip.24, Hemip.25, Hemip.28, Hemip.29, Hemip.30, Hemip.31, Hemip.32, Hemip.34
+Hymenoptera	Crato	Hymen.13822, Hymen.13826, Hymen.13827, Hymen.13831, Hymen.13868, Hymen.13869, Hymen.13870, Hymen.13871, Hymen.13873, Hymen.13874, Hymen.13876, Hymen.13877, Hymen.13878, Hymen.13880, Hymen.13882, Hymen.13883
+Hymenoptera	Barbalha	Hymen.13823, Hymen.13824, Hymen.13832, Hymen.13835, Hymen.13837, Hymen.13838, Hymen.13839, Hymen.13840, Hymen.13841, Hymen.13842, Hymen.13843, Hymen.13844, Hymen.13845, Hymen.13846, Hymen.13848, Hymen.13849, Hymen.13850, Hymen.13851, Hymen.13852, Hymen.13853, Hymen.13855, Hymen.13856, Hymen.13857, Hymen.13858, Hymen.13859, Hymen.13861, Hymen.13862, Hymen.13863, Hymen.13865, Hymen.13867
+Hymenoptera	Ubajara	Hymen.13888, Hymen.13890, Hymen.13891, Hymen.13892, Hymen.13895, Hymen.13896, Hymen.13898, Hymen.13901, Hymen.13903, Hymen.13904, Hymen.13905, Hymen.13909
+Lepidoptera	Crato	Lepid.391, Lepid.392, Lepid.399, Lepid.400
+Lepidoptera	Barbalha	Lepid.393, Lepid.394, Lepid.396
+Lepidoptera	Ubajara	Lepid.402, Lepid.405, Lepid.407, Lepid.408, Lepid.409, Lepid.410
+Orthoptera	Barbalha	Orthop.1, Orthop.2, Orthop.6, Orthop.7
+Orthoptera	Crato	Orthop.8, Orthop.9, Orthop.10
+Orthoptera	Ubajara	Orthop.11, Orthop.12, Orthop.15

@@ -97,4 +97,22 @@ elevation <- raster('data/spatial_layers/wc2.1_30s_elev/wc2.1_30s_elev.tif')
 
 ```
 
+Collapsing insect spreadsheet for SISGEN
 
+```{r}
+
+insects <- read.csv('data/role_insects_triage_oct2022.csv')
+
+tombo <- paste0(insects$Código.da.coleção, insects$Tombo.MHNBA)
+insects <- data.frame(insects,tombo)
+
+sisgen.table <- insects %>% group_by(Ordem) %>%
+  summarise(city = unique(Município))
+
+tombo <- c()
+for (i in 1:nrow(sisgen.table)) {
+  tombo <- rbind(tombo,paste(insects$tombo[which(insects$Ordem==as.character(sisgen.table[i,1]) & insects$Município==as.character(sisgen.table[i,2]))],collapse = ', '))
+}
+sisgen.table <- data.frame(sisgen.table, tombo = tombo)
+write.table(sisgen.table,'data/sisgen.table.oct.2022.txt',row.names = F, col.names = T, quote = F, sep='\t')
+```
