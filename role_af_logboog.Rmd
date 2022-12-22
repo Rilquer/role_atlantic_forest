@@ -87,9 +87,32 @@ sisgen.table <- data.frame(sisgen.table, tombo = tombo)
 write.table(sisgen.table,'data/sisgen.table.oct.2022.txt',row.names = F, col.names = T, quote = F, sep='\t')
 ```
 
-## Dec 21, 2022
+## Dec 22, 2022
 
-Wrangle presence data list per island (from wikiaves)
-Wrangle presence data list per point in island (from personal lists)
-Create data set with species and their respective phylogenetic (family and genus) and trait data
+Wrangle presence data list per island.
+This data came from personal lists. In the future, it will be complemented through sound recording.
+
+```{r}
+
+```
+
+Create data set with species and their respective phylogenetic (family and genus) and trait data.
+
+First define a list of the metacommunity. Probably based on wikiaves/ebird/birdlife and radius around local community.
+
+Load that list here and derive family, traits and abundance from different datasets:
+- Family: Bird 2020
+- Body size: ATLANTIC BIRDS TRAIT / HBW / My own data
+- Wing length / Tarsus Length: AVONET
+- Forest Sensitivity: Stotz - Personal knowledge
+- Diet: Elton Traits / Bird 2020
+- Trophic level: AVONET
+- Abundance: ebird/birdlife record numbers? Download all records from one of these databases in each locality, and in the metacommunity, and count reative proportion of records?
+
+Some of these datasets will not have all species. Also, some knowledge will need to be added manually.
+
+```{r}
+
+```
+
 Wrangle all that data here into one big master spreadsheet for the preliminary analyses
